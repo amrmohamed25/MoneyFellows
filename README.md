@@ -77,7 +77,7 @@ After the admin has created a category, welcome page will have an extra part for
 
 <img src="https://github.com/amrmohamed25/MoneyFellows/blob/51a75b108686ef76f40f4d7dd30de2e750517a6f/public/images/welcome_update.gif">
 
-Users should register with their email and they should have unique email, phone number, national id or they will have to try again. 
+Users should register and they should have unique email, phone number, national id or they will have to try again. 
 
 After registering, they will be redirected to their dashboard where they will be able to see available categories and by pressing requests, They will be enrolled to the unfull gam3eya (current) or enrolled to a new gam3eya. 
 
