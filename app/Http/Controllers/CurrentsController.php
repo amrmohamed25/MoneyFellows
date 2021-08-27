@@ -157,8 +157,8 @@ class CurrentsController extends Controller
                     $money = $current->pivot->money;
                     if ($current->pivot->is_paid == 0) {
                         $temp = 1;
+                        break;
                     }
-                    break;
                 }
             }
             if ($temp == 1) {

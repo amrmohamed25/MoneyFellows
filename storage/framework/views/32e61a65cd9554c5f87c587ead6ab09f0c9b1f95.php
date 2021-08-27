@@ -1,11 +1,9 @@
-@extends('layouts.app')
-
-@section('style')
-    <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/fontawesome-all.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/swiper.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/magnific-popup.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/styles.css') }}" rel="stylesheet">
+<?php $__env->startSection('style'); ?>
+    <link href="<?php echo e(asset('/css/bootstrap.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('/css/fontawesome-all.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('/css/swiper.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('/css/magnific-popup.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('/css/styles.css')); ?>" rel="stylesheet">
     <style>
         .StripeElement {
             box-sizing: border-box;
@@ -31,9 +29,9 @@
             background-color: #fefde5 !important;
         }
     </style>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('header')
+<?php $__env->startSection('header'); ?>
     <!-- Preloader -->
     <div class="spinner-wrapper">
         <div class="spinner">
@@ -49,13 +47,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12" style="height: 300px;position: relative;">
-                            @if (Session::has('message'))
-                                <div class="alert alert-info">{{ Session::get('message') }}</div>
-                            @endif
+                            <?php if(Session::has('message')): ?>
+                                <div class="alert alert-info"><?php echo e(Session::get('message')); ?></div>
+                            <?php endif; ?>
 
-                                <form method="POST" action="{{url('/checkout/'.$current->id)}}"
+                                <form method="POST" action="<?php echo e(url('/checkout/'.$current->id)); ?>"
                                       class="card-form mt-3 mb-3">
-                                    @csrf
+                                    <?php echo csrf_field(); ?>
                                     <input type="hidden" name="payment_method" class="payment-method">
                                     <input class="StripeElement mb-3" name="card_holder_name"
                                            placeholder="Card holder name" required>
@@ -65,7 +63,8 @@
                                     <div id="card-errors" role="alert"></div>
                                     <div class="form-group mt-3">
                                         <button type="submit" class="btn btn-primary pay">
-                                            Pay {{$money}}
+                                            Pay <?php echo e($money); ?>
+
                                         </button>
                                     </div>
                                 </form>
@@ -77,11 +76,11 @@
         </div>
     </header> <!-- end of header -->
     <!-- end of header -->
-@endsection
-@section('scripts')
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('scripts'); ?>
     <script src="https://js.stripe.com/v3/"></script>
     <script>
-        let stripe = Stripe("{{ env('STRIPE_KEY') }}")
+        let stripe = Stripe("<?php echo e(env('STRIPE_KEY')); ?>")
         let elements = stripe.elements()
         let style = {
             base: {
@@ -107,7 +106,7 @@
                 return true
             }
             stripe.confirmCardSetup(
-                "{{ $intent->client_secret }}",
+                "<?php echo e($intent->client_secret); ?>",
                 {
                     payment_method: {
                         card: card,
@@ -128,4 +127,6 @@
         })
     </script>
 
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH F:\Training\RMZ\moneyfellows.github.io\resources\views/payment.blade.php ENDPATH**/ ?>
