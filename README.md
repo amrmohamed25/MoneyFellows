@@ -11,7 +11,7 @@ The idea of this project is to help the users in saving money through a trusted 
 <h2>Design Pattern</h2>
 
 This project is using the MVC design pattern 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1200px-MVC-Process.svg.png">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/MVC-Process.svg/1200px-MVC-Process.svg.png" width="400">
 <h3>Views</h3>
 
 It is that part of the application that represents the presentation of data.
