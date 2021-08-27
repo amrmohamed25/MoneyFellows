@@ -14,7 +14,7 @@ The idea of this project is to help the users in saving money through a trusted 
 
 <h2>Screenshots</h2>
 
-<img src="https://github.com/amrmohamed25/MoneyFellows/blob/2c9a239158c5b8c33aa3021c269dd8ef360d569a/public/images/welcome_page.gif">
+<img src="https://github.com/amrmohamed25/MoneyFellows/blob/2c9a239158c5b8c33aa3021c269dd8ef360d569a/public/images/welcome_page.gif" width="800>
 
 <h2>Design Pattern</h2>
 
