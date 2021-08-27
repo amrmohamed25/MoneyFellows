@@ -70,11 +70,3 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/delete/{current_id}', '\A
 Route::middleware(['auth:sanctum', 'verified'])->get('/pay/{current_id}', '\App\Http\Controllers\CurrentsController@show');
 
 
-
-
-
-Route::post('/subscribe', function (Request $request) {
-    $request->user()->newSubscription(
-        'default', 'price_monthly'
-    )->create($request->paymentMethodId);
-});

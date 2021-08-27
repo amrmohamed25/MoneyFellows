@@ -28,10 +28,6 @@ class CurrentsController extends Controller
         $user = Auth::user();
         if ($user->email != 'admin@admin.com') {
             $user->createOrGetStripeCustomer();
-//        $stripeCustomer = $user->createOrGetStripeCustomer();
-//        echo($stripeCustomer->id);
-//        $user->applyBalance(-4000 *100, 'Decrease');//if (money) debt
-//        echo($stripeCustomer->balance);
             if ($user->currents()->where('current_id', $current_id)->count() != 0 && Current::find($current_id)->no_of_members != DB::table('current_user')->where('current_id', $current_id)->pluck('months_left_to_be_paid')->count()) {
                 Session::flash('message', "You have already registered this Category!!");
                 return redirect(url('/') . '#pricing');
@@ -39,14 +35,6 @@ class CurrentsController extends Controller
                 $category = Category::find($current_id);
                 $current = Current::find($current_id);
 
-
-//            $order = 1;
-//            $records = Current::all();
-//            foreach ($records as $row) {
-//                $row->id = $order;
-//                $row->save();
-//                $order++;
-//            }
 
                 if ($current == null) {
                     $current = new Current;
@@ -91,23 +79,7 @@ class CurrentsController extends Controller
      */
     public function create()
     {
-//        $user_id=Auth::id();
-//        $user = Auth::id();
-//        if ($user->email != 'admin@admin.com') {
-//            $current = Current::find($current_id);
-//            if ($user->currents()->where('current_id', $current->id)->count() == 0) {
-//                $user->currents()->save($current);
-//                Session::flash('message', "Category registered successfully");
-//                return redirect(url()->previous() . '#pricing');
-//            } else {
-//                Session::flash('message', "You have already registered this Category!!");
-//                return redirect(url()->previous() . '#pricing');
-//            }
-//        }
-//        else{
-//            Session::flash('message', "Admin can't register a category!!");
-//            return redirect(url()->previous() . '#pricing');
-//        }
+        //
     }
 
     /**

@@ -1,13 +1,11 @@
-@extends('layouts.app')
-
-@section('style')
-    <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/fontawesome-all.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/swiper.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/magnific-popup.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/styles.css') }}" rel="stylesheet">
-@endsection
-@section('header')
+<?php $__env->startSection('style'); ?>
+    <link href="<?php echo e(asset('/css/bootstrap.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('/css/fontawesome-all.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('/css/swiper.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('/css/magnific-popup.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('/css/styles.css')); ?>" rel="stylesheet">
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('header'); ?>
     <!-- Preloader -->
     <div class="spinner-wrapper">
         <div class="spinner">
@@ -42,9 +40,9 @@
         </div> <!-- end of header-content -->
     </header> <!-- end of header -->
     <!-- end of header -->
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('slot')
+<?php $__env->startSection('slot'); ?>
     <!-- features -->
     <div id="features" class="cards-1">
         <div class="container">
@@ -328,9 +326,9 @@
                         away. They're great for small companies and large organizations</p>
                 </div> <!-- end of col -->
                 <div class="col-lg-12">
-                    @if (Session::has('message'))
-                        <div class="alert alert-info">{{ Session::get('message') }}</div>
-                    @endif
+                    <?php if(Session::has('message')): ?>
+                        <div class="alert alert-info"><?php echo e(Session::get('message')); ?></div>
+                    <?php endif; ?>
                 </div>
             </div> <!-- end of row -->
             <div class="slider-2" style="background: none;padding-bottom: 0px;">
@@ -342,20 +340,20 @@
                                 <div class="swiper-wrapper">
 
                                     <!-- Card-->
-                                    @foreach($categories as $category)
-                                        @if($loop->index%4==0)
+                                    <?php $__currentLoopData = $categories; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                        <?php if($loop->index%4==0): ?>
                                             <div class="swiper-slide">
                                                 <!-- Slide -->
-                                                @endif
+                                                <?php endif; ?>
                                                 <div class="card">
                                                     <div class="card-body">
-                                                        <div class="card-title">{{$category->name}}</div>
+                                                        <div class="card-title"><?php echo e($category->name); ?></div>
                                                         <div class="card-subtitle">Category
-                                                            ID: {{$category->id}}</div>
+                                                            ID: <?php echo e($category->id); ?></div>
                                                         <hr class="cell-divide-hr">
                                                         <div class="price">
                                                             <span class="currency">EGP</span><span
-                                                                class="value">{{$category->money}}</span>
+                                                                class="value"><?php echo e($category->money); ?></span>
                                                             <div class="frequency">monthly</div>
                                                         </div>
                                                         <hr class="cell-divide-hr">
@@ -363,33 +361,33 @@
                                                             <li class="media">
                                                                 <i class="fas fa-check"></i>
                                                                 <div class="media-body">Category
-                                                                    Months: {{$category->months}}</div>
+                                                                    Months: <?php echo e($category->months); ?></div>
                                                             </li>
                                                             <li class="media">
                                                                 <i class="fas fa-check"></i>
                                                                 <div class="media-body">Category
-                                                                    Members: {{$category->no_of_members}}</div>
+                                                                    Members: <?php echo e($category->no_of_members); ?></div>
                                                             </li>
                                                         </ul>
                                                         <div class="button-wrapper">
-                                                            @if(Auth::id()!=null)
+                                                            <?php if(Auth::id()!=null): ?>
                                                                 <a class="btn-solid-reg page-scroll"
-                                                                   href="{{ url('/join/'.$category->id) }}">REQUEST</a>
-                                                            @else
+                                                                   href="<?php echo e(url('/join/'.$category->id)); ?>">REQUEST</a>
+                                                            <?php else: ?>
                                                                 <a class="btn-solid-reg page-scroll"
-                                                                   href="{{ url('/login') }}">REQUEST</a>
-                                                            @endif
+                                                                   href="<?php echo e(url('/login')); ?>">REQUEST</a>
+                                                            <?php endif; ?>
 
                                                         </div>
                                                     </div>
                                                 </div> <!-- end of card -->
                                                 <!-- end of card -->
-                                                @if($loop->index==3||($loop->index%4==0 && $loop->index!=0 && $loop->index!=4)||$loop->last)
+                                                <?php if($loop->index==3||($loop->index%4==0 && $loop->index!=0 && $loop->index!=4)||$loop->last): ?>
                                                     <div class="swiper-button-next"></div>
                                                     <div class="swiper-button-prev"></div>
                                             </div>
-                                        @endif
-                                    @endforeach
+                                        <?php endif; ?>
+                                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                                 </div>
                             </div>
@@ -532,7 +530,7 @@
                         <img class="card-image" src="images/one.png" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Amr Mohamed</h5>
-                            <p class="card-text">Computer Communication Engineer</p>
+                            <p class="card-text">Developer</p>
                         </div>
                         <div class="card-footer">
                             <span class="social-icons">
@@ -694,5 +692,7 @@
     </div> <!-- end of copyright -->
     <!-- end of copyright -->
 
-@endsection
+<?php $__env->stopSection(); ?>
 
+
+<?php echo $__env->make('layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH F:\Training\RMZ\moneyfellows.github.io\resources\views/welcome.blade.php ENDPATH**/ ?>
