@@ -1,6 +1,6 @@
 <a href="https://moneyfellows.com/"><img src="https://github.com/amrmohamed25/MoneyFellows/blob/36fd13765a2c057204f1199409b57c2f85a0e24f/public/images/web_logo_white.png" width="200"></a>
 
-This project is a replica of the famous mobile application "MoneyFellows". The Front-End part was done using HTML, CSS, Bootstrap, JavaScript, jQuery while the Back-End was done using Laravel & PHP.
+This project is a replica of the famous mobile application "MoneyFellows". The Front-End part was done using HTML, CSS, Bootstrap, JavaScript, jQuery while the Back-End was done using Laravel & PHP. This project requires that the admin create a category only and everything else is done without the admin such as:<ul> <li>starting gam3eyas "Money Circles"</li><li>checking and collection payments</li> </ul>
 
 <h2>Idea of the project</h2>
 
@@ -37,3 +37,12 @@ The model component stores data and its related logic. It represents data that i
 It responds to the request from the views and also responds to instructions from the controller to update itself. It is also the lowest level of the pattern which is responsible for maintaining data.
 
 Example for models used in the project: User model, Current model , Category model.
+
+<h2>Features</h2>
+
+<ul>
+    <li>Admin can create a category which will be used to create gam3eyas</li>
+    <li>User can register many gam3eyas "Money Circles" according to his needs(money, months , when he wants to get paid)</li>
+    <li></li>
+    <li>User can modify when he wants to get paid if the gam3eyya "Money Circle" didn't start </li>
+    </ul>
