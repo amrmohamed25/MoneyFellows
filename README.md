@@ -59,6 +59,13 @@ Example for models used in the project: User model, Current model , Category mod
     <li>User can leave the gam3eya "Money Circle" if didn't start</li>
 </ul>
 
+<h2>Admin Guide</h2>
+
+The admin should register his account <strong> with email: admin@admin.com</strong> and he/she should enter his/her phone number and national id correctly or he/she will have to try again.
+After registering, the admin will be redirected to his/her dashboard where he/she will be able to create a category "Category is used to create gam3eyas (currents)", for example: category 1 can be used to create 3 gam3eyas (currents), these gam3eyas have same attributes as the category but they have different users. The admin only job is to create category and edit or delete them but to edit or delete categories there shouldn't be a gam3eya (current) that isn't full because it inherits the attributes of the category so if category was edited, the current will be affected.
+
 <h2>User Manual</h2>
 
-The admin should register his account <strong> with email: admin@admin.com</strong>.
+Users should register with their email and they should have unique email, phone number, national id or they will have to try again. After registering, they will be redirected to their dashboard where they will be able to see available categories and by pressing requests, They will be enrolled to the unfull gam3eya (current) or enrolled to a new gam3eya. After that, he will be redirected to gam3yatk page where they will be able to see all gam3eyas (currents) they enrolled in and if the category isn't full he will be able to edit the months left to be paid or leave if they want. Once the category reach its limit, it will start directly and a notification will be sent to the users that joined this gam3eya (current). After starting the current (gam3yya), a pay button will be available, the user should pay before the due date and he will be notified two days before the due date if he didn't pay. when pressing the pay button he will be redirected to page where he will enter his card holder name and his card number and he will press the pay button to pay.
+Note: Users will pay extra 100 egp in his first gam3eya (current) only which are subscription fees.
+
