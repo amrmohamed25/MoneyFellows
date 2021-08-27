@@ -67,6 +67,8 @@ After registering, the admin will be redirected to his/her dashboard where he/sh
 
 The admin's job is to create category and edit or delete them but to edit or delete categories there shouldn't be a gam3eya (current) that isn't full because it inherits the attributes of the category so if category was edited, the current will be affected.
 
+<img src="https://github.com/amrmohamed25/MoneyFellows/blob/93aca51ebbb1e1a6e6883cee72ac435d874f4e74/public/images/register_admin.gif">
+
 <h2>User Manual</h2>
 
 Users should register with their email and they should have unique email, phone number, national id or they will have to try again. 
