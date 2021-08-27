@@ -43,15 +43,15 @@
     <?php
 if (! isset($_instance)) {
     $html = \Livewire\Livewire::mount('navigation-menu')->html();
-} elseif ($_instance->childHasBeenRendered('9MyDJb8')) {
-    $componentId = $_instance->getRenderedChildComponentId('9MyDJb8');
-    $componentTag = $_instance->getRenderedChildComponentTagName('9MyDJb8');
+} elseif ($_instance->childHasBeenRendered('7CXropY')) {
+    $componentId = $_instance->getRenderedChildComponentId('7CXropY');
+    $componentTag = $_instance->getRenderedChildComponentTagName('7CXropY');
     $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('9MyDJb8');
+    $_instance->preserveRenderedChild('7CXropY');
 } else {
     $response = \Livewire\Livewire::mount('navigation-menu');
     $html = $response->html();
-    $_instance->logRenderedChild('9MyDJb8', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
+    $_instance->logRenderedChild('7CXropY', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
 }
 echo $html;
 ?>
@@ -61,11 +61,8 @@ echo $html;
     <?php echo $__env->yieldContent('header'); ?>
 
 
-
 <!-- Page Content -->
 <?php echo $__env->yieldContent('slot'); ?>
-
-
 
 
 <?php echo $__env->yieldPushContent('modals'); ?>

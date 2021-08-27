@@ -55,7 +55,7 @@ class CategoryController extends Controller
                         $category->no_of_members = $request->no_of_members;
                         $category->save();
                         Session::flash('message', "Category registered successfully");
-                        break;
+                        return redirect(url('/dashboard'));
                     }
                 }
             } else {
@@ -66,8 +66,9 @@ class CategoryController extends Controller
                 $category->months = $request->months;
                 $category->no_of_members = $request->no_of_members;
                 $category->save();
+                return redirect(url('/dashboard'));
             }
-            return redirect(url('/dashboard'));
+
         } else {
             return redirect()->back();
         }
