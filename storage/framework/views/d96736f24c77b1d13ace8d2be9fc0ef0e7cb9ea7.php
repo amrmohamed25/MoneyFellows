@@ -315,7 +315,7 @@
     <!-- end of details lightbox 2 -->
     <!-- end of details lightboxes -->
 
-
+<?php if(DB::table('currents')->count()!=0): ?>
     <div id="pricing" class="cards-2">
         <div class="container">
             <div class="row">
@@ -397,6 +397,7 @@
             </div> <!-- end of container -->
         </div>
     </div>
+    <?php endif; ?>
     <!-- Video -->
     <div class="basic-3">
         <div class="container">
@@ -525,7 +526,7 @@
                     <h2>About The Team</h2>
                     <p class="p-heading p-large">Meet the developer</p>
                 </div> <!-- end of col -->
-                <div class="col-lg-6" style="text-align: center;margin: auto">
+                <div class="col-lg-3" style="text-align: center;margin: auto">
                     <div class="card">
                         <img class="card-image" src="images/one.png" alt="Card image cap">
                         <div class="card-body">
