@@ -69,7 +69,13 @@ The admin's job is to create category and edit or delete them but to edit or del
 
 <img src="https://github.com/amrmohamed25/MoneyFellows/blob/93aca51ebbb1e1a6e6883cee72ac435d874f4e74/public/images/register_admin.gif">
 
+<img src="https://github.com/amrmohamed25/MoneyFellows/blob/51a75b108686ef76f40f4d7dd30de2e750517a6f/public/images/adminpage.gif">
+
 <h2>User Manual</h2>
+
+After the admin has created a category, welcome page will have an extra part for the categories so that users can register from.
+
+<img src="https://github.com/amrmohamed25/MoneyFellows/blob/51a75b108686ef76f40f4d7dd30de2e750517a6f/public/images/welcome_update.gif">
 
 Users should register with their email and they should have unique email, phone number, national id or they will have to try again. 
 
