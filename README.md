@@ -1,6 +1,10 @@
 <a href="https://moneyfellows.com/"><img src="https://github.com/amrmohamed25/MoneyFellows/blob/36fd13765a2c057204f1199409b57c2f85a0e24f/public/images/web_logo_white.png" width="200"></a>
 
-This project is a replica of the famous mobile application "MoneyFellows". The Front-End part was done using HTML, CSS, Bootstrap, JavaScript, jQuery while the Back-End was done using Laravel & PHP. This project requires that the admin create a category only and everything else is done without the admin such as:
+This project is a replica of the famous mobile application "MoneyFellows". The Front-End part was done using HTML, CSS, Bootstrap, JavaScript, jQuery while the Back-End was done using Laravel & PHP. 
+
+Some Laravel services was used in project like: <ul><li>Laravel Cashier Stripe was used to handle payments</li> <li>Laravel Notification was used to send notifications to user</li> <li>Laravel Scheduler was used to: check for user payments daily,make extra fees to those who didn't pay, collecting payments and updating due date</li></ul>
+ 
+This project requires that the admin create a category only and everything else is done without the admin such as:
 <ul> 
     <li>Starting gam3eyas "Money Circles"</li>
     <li>Checking and collecting payments</li>
@@ -81,9 +85,12 @@ Users should register and they should have unique email, phone number, national 
 
 <img src="https://github.com/amrmohamed25/MoneyFellows/blob/72a0bac16542ecc50d87e076e042f64133156b02/public/images/user_register.gif">
 
-After registering, they will be redirected to their dashboard where they will be able to see available categories and by pressing requests, They will be enrolled to the unfull gam3eya (current) or enrolled to a new gam3eya. 
+After registering, they will be redirected to their dashboard where they will be able to see available categories and by pressing request, They will be enrolled to an unfull gam3eya (current) or enrolled to a new gam3eya with same attributes as the category. 
+
+<img src="https://github.com/amrmohamed25/MoneyFellows/blob/63faa788d295413cfc9ecc771e5a05c056d77f66/public/images/userpage.gif">
 
 After that, he will be redirected to gam3yatk page where they will be able to see all gam3eyas (currents) they enrolled in and if the category isn't full he will be able to edit the months left to be paid or leave if they want. Once the category reach its limit, it will start directly and a notification will be sent to the users that joined this gam3eya (current). After starting the current (gam3yya), a pay button will be available, the user should pay before the due date and he will be notified two days before the due date if he didn't pay. when pressing the pay button he will be redirected to page where he will enter his card holder name and his card number and he will press the pay button to pay.
 
 Note: Users will pay extra 100 egp in this first gam3eya (current) only (subscription fees).
 
+<img src="https://github.com/amrmohamed25/MoneyFellows/blob/63faa788d295413cfc9ecc771e5a05c056d77f66/public/images/userpay.gif">
