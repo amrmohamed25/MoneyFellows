@@ -36,4 +36,4 @@ The model component stores data and its related logic. It represents data that i
 
 It responds to the request from the views and also responds to instructions from the controller to update itself. It is also the lowest level of the pattern which is responsible for maintaining data.
 
-Example for models used in the project: User model,Current model , Category model.
+Example for models used in the project: User model, Current model , Category model.
