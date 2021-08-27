@@ -79,6 +79,8 @@ After the admin has created a category, welcome page will have an extra part for
 
 Users should register and they should have unique email, phone number, national id or they will have to try again. 
 
+<img src="https://github.com/amrmohamed25/MoneyFellows/blob/72a0bac16542ecc50d87e076e042f64133156b02/public/images/user_register.gif">
+
 After registering, they will be redirected to their dashboard where they will be able to see available categories and by pressing requests, They will be enrolled to the unfull gam3eya (current) or enrolled to a new gam3eya. 
 
 After that, he will be redirected to gam3yatk page where they will be able to see all gam3eyas (currents) they enrolled in and if the category isn't full he will be able to edit the months left to be paid or leave if they want. Once the category reach its limit, it will start directly and a notification will be sent to the users that joined this gam3eya (current). After starting the current (gam3yya), a pay button will be available, the user should pay before the due date and he will be notified two days before the due date if he didn't pay. when pressing the pay button he will be redirected to page where he will enter his card holder name and his card number and he will press the pay button to pay.
