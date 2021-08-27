@@ -315,7 +315,7 @@
     <!-- end of details lightbox 2 -->
     <!-- end of details lightboxes -->
 
-<?php if(DB::table('currents')->count()!=0): ?>
+<?php if(DB::table('categories')->count()!=0): ?>
     <div id="pricing" class="cards-2">
         <div class="container">
             <div class="row">
