@@ -14,6 +14,8 @@ The idea of this project is to help the users in saving money through a trusted 
 
 <h2>Screenshots</h2>
 
+<img src="https://github.com/amrmohamed25/MoneyFellows/blob/36fd13765a2c057204f1199409b57c2f85a0e24f/public/images/welcome_page.gif">
+
 <h2>Design Pattern</h2>
 
 This project is using the MVC design pattern 
