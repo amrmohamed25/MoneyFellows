@@ -102,7 +102,7 @@ class CurrentsController extends Controller
             if ($user->currents()->where('current_id', $current->id)->count() === 0) {//check if user is already in it or not
                 if (DB::table('current_user')->where('current_id', $request->current_id)->where('months_left_to_be_paid', $request->months_left_to_be_paid)->count() == 0) {
                     $user->currents()->attach($current, array('months_left_to_be_paid' => $request->months_left_to_be_paid, 'money' => $request->money + $subscriptionfees, 'is_paid' => 0));
-                    if (Current::find($request->current_id)->no_of_members == DB::table('current_user')->where('current_id', $request->current_id)->pluck('months_left_to_be_paid')->count()) {
+                    if (Current::find($request->current_id)->no_of_members == DB::table('current_user')->where('current_id', $request->current_id)->pluck('months_left_to_be_paid')->count()) { // if it reached max number of members, then set due date(gam3eya started)
                         $current = Current::find($request->current_id);
                         $current->due_date = Carbon::now()->addMonth()->addDay()->format('Y-m-d');
                         $current->save();
@@ -125,7 +125,7 @@ class CurrentsController extends Controller
                 } else {
                     Session::flash('message', "Category registered successfully");
                 }
-                return redirect(url('/') . '#pricing');
+                return redirect(url('/gam3yatk'));
             } else {
                 Session::flash('message', "You have already registered this Category!!");
                 return redirect(url('/') . '#pricing');
