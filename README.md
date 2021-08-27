@@ -75,5 +75,5 @@ After registering, they will be redirected to their dashboard where they will be
 
 After that, he will be redirected to gam3yatk page where they will be able to see all gam3eyas (currents) they enrolled in and if the category isn't full he will be able to edit the months left to be paid or leave if they want. Once the category reach its limit, it will start directly and a notification will be sent to the users that joined this gam3eya (current). After starting the current (gam3yya), a pay button will be available, the user should pay before the due date and he will be notified two days before the due date if he didn't pay. when pressing the pay button he will be redirected to page where he will enter his card holder name and his card number and he will press the pay button to pay.
 
-Note: Users will pay extra 100 egp in his first gam3eya (current) only which are subscription fees.
+Note: Users will pay extra 100 egp in this first gam3eya (current) only (subscription fees).
 
