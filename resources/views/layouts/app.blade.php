@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,600,700,700i&amp;subset=latin-ext"
           rel="stylesheet">
 @yield('style')
-{{--    {{$style}}--}}
+
 
 
     @livewireStyles
@@ -27,20 +27,17 @@
 <body data-spy="scroll" data-target=".fixed-top">
 <x-jet-banner/>
 
-{{--<div class="min-h-screen bg-gray-100">--}}
+
     @livewire('navigation-menu')
 
     <!-- Page Heading -->
-{{--@if (isset($header))--}}
+
     @yield('header')
-{{--    {{ $header }}--}}
-{{--@endif--}}
+
 
 <!-- Page Content -->
 @yield('slot')
-{{--        {{ $slot }}--}}
 
-{{--</div>--}}
 
 @stack('modals')
 
