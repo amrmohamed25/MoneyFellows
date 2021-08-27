@@ -2,7 +2,7 @@
 
 This project is a replica of the famous mobile application "MoneyFellows". The Front-End part was done using HTML, CSS, Bootstrap, JavaScript, jQuery while the Back-End was done using Laravel & PHP. 
 
-Some Laravel services was used in project like: <ul><li>Laravel Cashier Stripe was used to handle payments</li> <li>Laravel Notification was used to send notifications to user</li> <li>Laravel Scheduler was used to: check for user payments daily,make extra fees to those who didn't pay, collecting payments and updating due date</li></ul>
+Some Laravel services that were used in the project: <ul><li>Laravel Cashier Stripe was used to handle payments</li> <li>Laravel Notification was used to send notifications to user</li> <li>Laravel Scheduler was used to: check for user payments daily,make extra fees to those who didn't pay, collecting payments and updating due date</li></ul>
  
 This project requires that the admin create a category only and everything else is done without the admin such as:
 <ul> 
